@@ -54,9 +54,6 @@ def topological_sort(vertices)
       stack << v if v.in_edges.empty? && !stack.include?(v)
     end
   end
+  return [] unless vertices.empty?
   sorted
-end
-
-def cyclical_or_unconnected?(vertices)
-  false
 end
